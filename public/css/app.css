@@ -45,6 +45,77 @@ header .main_nav ul li a:hover {
   background-position: center;
 }
 
+.products_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products_container .box_pasta {
+  display: flex;
+  width: calc(100% / 3);
+  position: relative;
+}
+
+.products_container .box_pasta:hover .overlay {
+  opacity: 1;
+}
+
+.products_container .box_pasta:hover .overlay i {
+  -webkit-animation: marMove 0.3s linear forwards;
+          animation: marMove 0.3s linear forwards;
+  cursor: pointer;
+}
+
+@-webkit-keyframes marMove {
+  0% {
+    margin-bottom: 50px;
+  }
+
+  100% {
+    margin-bottom: 30px;
+  }
+}
+
+@keyframes marMove {
+  0% {
+    margin-bottom: 50px;
+  }
+
+  100% {
+    margin-bottom: 30px;
+  }
+}
+
+.products_container .box_pasta img {
+  width: 100%;
+}
+
+.products_container .box_pasta .overlay {
+  position: absolute;
+  color: #fff;
+  background-color: #002d75c0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+.products_container .box_pasta .overlay i {
+  border: 4px solid #fff;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+.products_container .box_pasta .overlay p {
+  font-size: 2em;
+}
+
 footer .footer_logo {
   text-align: center;
 }
