@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Teko", sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+header .main_nav {
+  margin: 15px 0;
+}
+
+header .main_nav ul {
+  list-style-type: none;
+}
+
+header .main_nav ul li {
+  display: inline-block;
+}
+
+header .main_nav ul li a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #002d75;
+  padding: 10px 20px;
+}
+
+header .main_nav ul li a:hover {
+  background-color: #b3e5fc;
+  color: #444;
+}
+

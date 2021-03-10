@@ -1,6 +1,6 @@
 <header>
     <div class="nav_logo">
-        <img src="{{asset('images/logo.png')}}" alt="Molisana logo">
+        <a href="{{route('homepage')}}"><img src="{{asset('images/logo.png')}}" alt="Molisana logo"></a>
     </div>
     <nav class="main_nav">
         <ul>
