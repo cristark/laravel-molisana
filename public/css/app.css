@@ -11,19 +11,15 @@ body {
 header {
   text-align: center;
 }
-
 header .main_nav {
   margin: 15px 0;
 }
-
 header .main_nav ul {
   list-style-type: none;
 }
-
 header .main_nav ul li {
   display: inline-block;
 }
-
 header .main_nav ul li a {
   text-decoration: none;
   font-size: 1.5em;
@@ -31,7 +27,6 @@ header .main_nav ul li a {
   color: #002d75;
   padding: 10px 20px;
 }
-
 header .main_nav ul li a:hover {
   background-color: #b3e5fc;
   color: #444;
@@ -39,7 +34,7 @@ header .main_nav ul li a:hover {
 
 .container {
   height: 800px;
-  background-image: url(/images/molisana-home.jpg?cb7db241726fb646d7e1c8553429c07c);
+  background-image: url("../images/molisana-home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,47 +44,38 @@ header .main_nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
 }
-
 .products_container .box_pasta {
   display: flex;
   width: calc(100% / 3);
   position: relative;
 }
-
 .products_container .box_pasta:hover .overlay {
   opacity: 1;
 }
-
 .products_container .box_pasta:hover .overlay i {
   -webkit-animation: marMove 0.3s linear forwards;
           animation: marMove 0.3s linear forwards;
   cursor: pointer;
 }
-
 @-webkit-keyframes marMove {
   0% {
     margin-bottom: 50px;
   }
-
   100% {
     margin-bottom: 30px;
   }
 }
-
 @keyframes marMove {
   0% {
     margin-bottom: 50px;
   }
-
   100% {
     margin-bottom: 30px;
   }
 }
-
 .products_container .box_pasta img {
   width: 100%;
 }
-
 .products_container .box_pasta .overlay {
   position: absolute;
   color: #fff;
@@ -103,7 +89,6 @@ header .main_nav ul li a:hover {
   align-items: center;
   transition: all 0.3s linear;
 }
-
 .products_container .box_pasta .overlay i {
   border: 4px solid #fff;
   border-radius: 50%;
@@ -111,9 +96,10 @@ header .main_nav ul li a:hover {
   font-size: 2em;
   margin-bottom: 50px;
 }
-
-.products_container .box_pasta .overlay p {
+.products_container .box_pasta .overlay a {
   font-size: 2em;
+  color: #fff;
+  text-decoration: none;
 }
 
 .news_container {
@@ -123,20 +109,16 @@ header .main_nav ul li a:hover {
   justify-content: center;
   position: relative;
 }
-
 .news_container .news_box {
   width: calc(100% / 3);
   display: flex;
 }
-
 .news_container .news_box:hover .overlay {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
 .news_container .news_box img {
   width: 100%;
 }
-
 .news_container .news_box .overlay {
   width: calc(100% / 3);
   height: 100%;
@@ -150,21 +132,17 @@ header .main_nav ul li a:hover {
   align-items: center;
   transition: all 0.3s linear;
 }
-
 .news_container .news_box .overlay p {
   font-size: 1.8em;
 }
-
 .news_container .news_box .overlay .divider {
   width: 50px;
   height: 2px;
   background: #fff;
 }
-
 .news_container .news_box .overlay h3 {
   font-size: 2em;
 }
-
 .news_container .news_box .overlay .btn {
   border: 2px solid #fff;
   padding: 10px 20px;
@@ -174,7 +152,6 @@ header .main_nav ul li a:hover {
   cursor: pointer;
   transition: all 0.3s linear;
 }
-
 .news_container .news_box .overlay .btn:hover {
   background-color: #002d75;
   border: 2px solid #002d75;
@@ -183,8 +160,6 @@ header .main_nav ul li a:hover {
 footer .footer_logo {
   text-align: center;
 }
-
 footer > img {
   width: 100%;
 }
-
