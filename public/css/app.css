@@ -116,7 +116,75 @@ header .main_nav ul li a:hover {
   font-size: 2em;
 }
 
+.news_container {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.news_container .news_box {
+  width: calc(100% / 3);
+  display: flex;
+}
+
+.news_container .news_box:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.news_container .news_box img {
+  width: 100%;
+}
+
+.news_container .news_box .overlay {
+  width: calc(100% / 3);
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+.news_container .news_box .overlay p {
+  font-size: 1.8em;
+}
+
+.news_container .news_box .overlay .divider {
+  width: 50px;
+  height: 2px;
+  background: #fff;
+}
+
+.news_container .news_box .overlay h3 {
+  font-size: 2em;
+}
+
+.news_container .news_box .overlay .btn {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.news_container .news_box .overlay .btn:hover {
+  background-color: #002d75;
+  border: 2px solid #002d75;
+}
+
 footer .footer_logo {
   text-align: center;
+}
+
+footer > img {
+  width: 100%;
 }
 

@@ -140,11 +140,47 @@ Route::get('/prodotti', function () {
                 "peso"=> "500g",
                 "descrizione"=> "Altro elemento cult della famiglia de lo Spaghetto Quadrato (N.1 Spaghetto Quadrato. Una new entry che sarà molto apprezzata sia dai consumatori che dagli chef, perché il Ditale Quadrato è un formato deliziosamente piccolo ma sostanzioso.<br>A dispetto del nome che fa pensare ad una pastina è un formato di pasta assolutamente versatile, adatto a moltissime ricette di primi piatti.<br>La sua consistenza soda si sprigiona in bocca con un\'esplosione di emozioni, grazie agli spessori corposi, al colore elegantemente ambrato, alla texture delicatamente ruvida, cangiante e piacevolissima al tatto che trattiene il condimento sulla superficie.<br>Il Ditale Quadrato sembra ideale per preparazioni strutturate come la ricetta con crema di broccoletto siciliano, calamari e pomodori semi secchi profumata al limone e carbone d\'olive nere."
             ]
+        ],
+        'news' => [
+            [
+                'poster' => 'https://www.lamolisana.it/wp-content/uploads/bfi_thumb/ricetta-vizzarri-articolo-1-p40t3ewk7bg8bob1xjgaxgu7jyv9v6sx7jhxnyxnsc.jpg',
+                'data' => '10/03/2021',
+                'testo' => '“Geometrie del Molise” di Nicola Vizzarri è il piatto vincitore del contest “Migliore chef d’Italia”'
+            ],
+            [
+                'poster' => 'https://www.lamolisana.it/wp-content/uploads/bfi_thumb/gemelli-insieme-in-salute-cover-p1eew7hw5lryoh0olz33ytwq5jiydpilchoxrkkazw.jpg',
+                'data' => '08/03/2021',
+                'testo' => 'Proseguono i webinar organizzati da Gemelli Molise, domani si parlerà dei tumori femminili'
+            ],
+            [
+                'poster' => 'https://www.lamolisana.it/wp-content/uploads/bfi_thumb/solodalcuore-p4072fc8hzwrmm5zf9lzw2pu2lel3rp2im67d8pf3g.jpg',
+                'data' => '08/03/2021',
+                'testo' => '#solodalcuore, Rossella Ferro testimonial del progetto benefico'
+            ]
         ]
     ];
     return view('products', $data);
 })->name('pag-prodotti');
 
 Route::get('/news', function () {
-    return view('news');
+    $data = [
+        'news' => [
+            [
+                'poster' => 'https://www.lamolisana.it/wp-content/uploads/bfi_thumb/ricetta-vizzarri-articolo-1-p40t3ewk7bg8bob1xjgaxgu7jyv9v6sx7jhxnyxnsc.jpg',
+                'data' => '10/03/2021',
+                'testo' => '“Geometrie del Molise” di Nicola Vizzarri è il piatto vincitore del contest “Migliore chef d’Italia”'
+            ],
+            [
+                'poster' => 'https://www.lamolisana.it/wp-content/uploads/bfi_thumb/gemelli-insieme-in-salute-cover-p1eew7hw5lryoh0olz33ytwq5jiydpilchoxrkkazw.jpg',
+                'data' => '08/03/2021',
+                'testo' => 'Proseguono i webinar organizzati da Gemelli Molise, domani si parlerà dei tumori femminili'
+            ],
+            [
+                'poster' => 'https://www.lamolisana.it/wp-content/uploads/bfi_thumb/solodalcuore-p4072fc8hzwrmm5zf9lzw2pu2lel3rp2im67d8pf3g.jpg',
+                'data' => '08/03/2021',
+                'testo' => '#solodalcuore, Rossella Ferro testimonial del progetto benefico'
+            ]
+        ]
+    ];
+    return view('news', $data);
 })->name('pag-news');

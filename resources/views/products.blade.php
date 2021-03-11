@@ -9,7 +9,7 @@
                 <img src="{{$item['src']}}" alt="{{$item['titolo']}}">
                 <div class="overlay">
                     <i class="fas fa-plus"></i>
-                    <p>{{$item['titolo']}}</p>
+                    <p>{{$item['titolo']}} - {{$item['tipo']}}</p>
                 </div>
             </div>
         @endforeach
