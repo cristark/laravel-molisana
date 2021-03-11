@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Prodotti | La Molisana')
+@section('title', 'Dettagli Prodotto | '.$dettagli['titolo'])
 
 @section('content')
     <div class="details_container">
@@ -9,6 +9,6 @@
         <p>{{$dettagli['titolo']}}</p>
         <p>{{$dettagli['cottura']}}</p>
         <p>{{$dettagli['peso']}}</p>
-        <p>{{$dettagli['descrizione']}}</p>
+        <p>{!!$dettagli['descrizione']!!}</p>
     </div>              
 @endsection
