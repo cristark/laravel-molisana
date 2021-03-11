@@ -22,17 +22,22 @@ Route::get('/', function () {
 Route::get('/prodotti', function () {
     $pasta = config('pasta');
 
-    $pasta_lunga = array_filter($pasta, function($element) {
-        return $element['tipo'] == 'lunga';
-    });
+    $collection = collect($pasta);
+    $pasta_lunga = $collection->where('tipo', 'lunga');
+    $pasta_corta = $collection->where('tipo', 'corta');
+    $pasta_cortissima = $collection->where('tipo', 'cortissima');
 
-    $pasta_corta = array_filter($pasta, function($element) {
-        return $element['tipo'] == 'corta';
-    });
+    // $pasta_lunga = array_filter($pasta, function($element) {
+    //     return $element['tipo'] == 'lunga';
+    // });
 
-    $pasta_cortissima = array_filter($pasta, function($element) {
-        return $element['tipo'] == 'cortissima';
-    });
+    // $pasta_corta = array_filter($pasta, function($element) {
+    //     return $element['tipo'] == 'corta';
+    // });
+
+    // $pasta_cortissima = array_filter($pasta, function($element) {
+    //     return $element['tipo'] == 'cortissima';
+    // });
 
     $data = [
         'tipi' => [
@@ -50,7 +55,7 @@ Route::get('/dettaglio/{id}', function ($id) {
     $pasta = config('pasta');
 
     // Controllo numero id per limitare i risultati a quelli contenuti nell'array
-    if(is_numeric($id) && $id >= 0 $$ $id < count($pasta)) {
+    if(is_numeric($id) && $id >= 0 && $id < count($pasta)) {
         $product = $pasta[$id];
 
         $data = ['dettagli' => $product];
